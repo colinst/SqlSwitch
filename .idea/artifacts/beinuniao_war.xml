@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="beinuniao:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/beinuniao_war</output-path>
+    <root id="archive" name="beinuniao_war.war">
+      <element id="artifact" artifact-name="beinuniao:war exploded" />
+    </root>
+  </artifact>
+</component>

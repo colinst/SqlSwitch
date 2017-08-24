@@ -1,0 +1,48 @@
+<component name="libraryTable">
+  <library name="Spring MVC-4.3.10.RELEASE" type="spring-mvc">
+    <properties version="4.3.10.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spring-websocket-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-portlet-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-web-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-webmvc-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/asm-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/cglib-nodep-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-dbcp-1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-pool-1.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/fastjson-1.2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javassist-3.17.1-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jstl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/log4j-1.2.17.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mybatis-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mybatis-spring-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mysql-connector-java-5.1.15-bin.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ojdbc8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/servlet-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-log4j12-1.7.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-aop-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-aspects-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-beans-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-context-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-context-support-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-core-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-expression-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-instrument-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-jdbc-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-jms-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-messaging-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-orm-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-oxm-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-test-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-tx-4.3.10.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/standard.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

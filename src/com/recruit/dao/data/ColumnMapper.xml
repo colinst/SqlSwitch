@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.recruit.dao.data.ColumnMapper">
+
+
+    <!--通过表名获得表对象-->
+    <select id="getTableByName" parameterType="string" resultType="com.recruit.model.Column" >
+          DESCRIBE ${_parameter};
+    </select>
+
+    <!--通过数据库名获得所有表名-->
+    <select id="getTableNames" parameterType="string" resultType="string">
+        show tables FROM ${_parameter};
+    </select>
+
+
+    <!--获得当前数据库实例中所有数据库名-->
+    <select id="getDbaNames" resultType="string">
+        SELECT `SCHEMA_NAME` FROM `information_schema`.`SCHEMATA`
+    </select>
+
+
+</mapper>
