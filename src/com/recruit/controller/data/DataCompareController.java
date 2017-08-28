@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.recruit.model.Column;
 import com.recruit.service.data.DataCompareService;
 import org.apache.commons.dbcp.BasicDataSource;
+import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,6 +24,7 @@ public class DataCompareController {
     private Map<String, List<Column>> dba1;//数据库Map
     private Map<String, List<Column>> dba2;
     private DynamicDataSource dynamicDataSource = new DynamicDataSource();//
+    private RegisterDataSource registerDataSource = new RegisterDataSource();
 
     @Resource
     private DataCompareService service;
@@ -56,29 +58,14 @@ public class DataCompareController {
 
         System.out.println("测试===");
         System.out.println(Dbs.getDbType());
-
-        dynamicDataSource = new DynamicDataSource();
         //dynamicDataSource.determineCurrentLookupKey();
 
-        BasicDataSource dataSource2=dynamicDataSource.createDataSource("com.mysql.jdbc.Driver",
-                "jdbc:mysql://localhost:3306/passport","root","admin");
 
-        dynamicDataSource.addTargetDataSource("dataSource2",dataSource2);
+        List list = service.getDbaNames();
+        System.out.println(list);
 
-        dynamicDataSource.setTargetDataSources(dynamicDataSource.getTargetDataSource());
-        dynamicDataSource.setTargetDataSource(dynamicDataSource.getTargetDataSource());
+        registerDataSource.onApplicationEvent();
 
-        dynamicDataSource.determineCurrentLookupKey();
-
-        Dbs.setDbType("dataSource2");
-
-        List list = new LinkedList();
-
-        System.out.println(Dbs.getDbType());
-
-        list=service.getDbaNames();
-
-        //dynamicDataSource.selectDataSource("1");
         Dbs.setDbType("1");
         list=service.getDbaNames();
 
@@ -211,5 +198,6 @@ public class DataCompareController {
     public void setService(DataCompareService service) {
         this.service = service;
     }
+
 
 }

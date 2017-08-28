@@ -30,14 +30,14 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
         String dataSourceName = Dbs.getDbType();
         if (dataSourceName == null) {
             // 默认的数据源名字
-            dataSourceName = "dataSource2";
+            dataSourceName = "dataSource";
         } else {
             this.selectDataSource(dataSourceName);
             if (dataSourceName.equals("0")) {
-                dataSourceName = "dataSource2";
+                dataSourceName = "dataSource";
             }
         }
-        log.debug("use datasource2 : " + dataSourceName);
+        log.debug("use datasource : " + dataSourceName);
         return dataSourceName;
     }
 
