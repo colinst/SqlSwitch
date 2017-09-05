@@ -1,7 +1,7 @@
 package com.recruit.service.user.impl;
 
 import com.recruit.model.Column;
-import com.recruit.model.Table;
+
 import com.recruit.model.User;
 import com.recruit.model.UserRole;
 

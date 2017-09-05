@@ -1,6 +1,6 @@
 package com.recruit.controller.user;
 
-import com.recruit.model.Table;
+
 import com.recruit.model.User;
 import com.recruit.model.UserRole;
 import com.recruit.service.user.UserManagerService;

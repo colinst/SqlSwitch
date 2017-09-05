@@ -41,8 +41,12 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-test-4.3.10.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-tx-4.3.10.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/standard.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/bonecp-0.7.1.RELEASE.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/bonecp-0.8.0.RELEASE-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
