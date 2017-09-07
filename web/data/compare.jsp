@@ -50,30 +50,6 @@
 
     </script>
     <style type="text/css">
-/*
-        table.imagetable {
-            font-family: verdana,arial,sans-serif;
-            font-size:11px;
-            color:#333333;
-            border-width: 1px;
-            border-color: #999999;
-            border-collapse: collapse;
-        }
-        table.imagetable th {
-            background:#b5cfd2 url('images/cell_blue.jpg');
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #999999;
-        }
-        table.imagetable td {
-            background:#dcddc0 url('images/cell_grey.jpg');
-            border-width: 1px;
-            padding: 8px;
-            border-style: solid;
-            border-color: #999999;
-        }
-    */
 table {
     overflow:hidden;
     border:1px solid #d3d3d3;

@@ -37,7 +37,7 @@
     </bean>-->
 
 
-    <bean id="dataSource" class="com.recruit.controller.data.DynamicDataSource">
+    <bean id="dataSource" class="com.recruit.controller.util.DynamicDataSource">
         <property name="targetDataSources">
             <map></map>
         </property>
@@ -47,7 +47,8 @@
     <bean id="ds2" class="org.apache.commons.dbcp.BasicDataSource"
           destroy-method="close">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
-        <property name="url" value="jdbc:mysql://rm-uf6y70f8z4zrabhvro.mysql.rds.aliyuncs.com:3306/passport"></property>
+        <property name="url"
+                  value="jdbc:mysql://rm-uf6y70f8z4zrabhvro.mysql.rds.aliyuncs.com:3306/beinuniao"></property>
         <property name="username" value="root"></property>
         <property name="password" value="1800438578Zz"></property>
     </bean>

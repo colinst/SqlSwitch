@@ -1,10 +1,9 @@
 package com.recruit.controller.data;
 
 import com.alibaba.fastjson.JSONArray;
+import com.recruit.controller.util.DbContextHolder;
 import com.recruit.model.Column;
 import com.recruit.service.data.DataCompareService;
-import org.apache.commons.dbcp.BasicDataSource;
-import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -28,8 +27,6 @@ public class DataCompareController {
     private DataCompareService service;
 
 
-
-
     //取得JSON格式的数据库Map
     @RequestMapping(value = "getdba.do",produces="text/plain;charset=utf8")
     @ResponseBody  //返回ajax数据
@@ -44,7 +41,7 @@ public class DataCompareController {
 
     //测试
     @RequestMapping(value = "test.do",produces="text/plain;charset=utf8")
-    @ResponseBody  //返回ajax数据
+    @ResponseBody
     public String test(){
 
         String str = JSONArray.toJSONString("");
@@ -56,48 +53,15 @@ public class DataCompareController {
     public void test1(){
 
         System.out.println("测试===dataSourceCut");
-        //xml中默认连接阿里云的mysql，如右图,现在想要切换到本地数据库，如下
 
-        DynamicDataSource dynamicDataSource = new DynamicDataSource();
-        BasicDataSource localDataSource = dynamicDataSource.createDataSource(
-                "com.mysql.jdbc.Driver",
-                "jdbc:mysql://localhost:3306/passport",
-                "root", "admin"
-        );
+        System.out.println(service.getDbaNames());
 
-        //打印当前数据源名称  结果为null
-        //但是默认配置的为ds2呀，如右图，并没有打印出来，应该打印除但是ds2才对
-        System.out.println(DbContextHolder.getDbType());
+        DbContextHolder.setDbType("ds4");
 
-        //SQL语句为：SELECT `SCHEMA_NAME` FROM `information_schema`.`SCHEMATA`
-        //(获取数据库实例中所有数据库名返回list)
-        //连接不同数据库返回其所有的数据库表名不同，通过此检测
-        //local应该返回13个库名，默认aliyun链接应该返回8个库名，以此区分
-
-        List list = service.getDbaNames();
-        System.out.println(list);    //默认连接阿里云，还没切换，此时得到8个
-        // 说明链接是默认的ds2，但是DbContextHolder.getDbType()得到为null
-
-        //进行切换操作
-        dynamicDataSource.setDataSource("local", localDataSource);
-
-        //list得到8个
-        //这个时候 DbContextHolder.getDbType()反而为变成默认的ds2了
-        //虽然没有切换成功但是  bContextHolder.getDbType()正常值ds2了
-        list = service.getDbaNames();
-        System.out.println(DbContextHolder.getDbType());
-
-        //用力，再次切换
-        DbContextHolder.setDbType("local");
-        list = service.getDbaNames();
-        //然而没有成功，还是和上面的一样的结果，原来的数据库得到8个库名，不是预想的13个
-        System.out.println(DbContextHolder.getDbType() + list);
+        System.out.println(service.getDbaNames());
 
 
-        //再次尝试 用select的方法，但是这次又报空指针，空的方法变了而已
-        dynamicDataSource.selectDataSource("local");//就是切换不到这里,感觉身体被掏空∠( ᐛ 」∠)＿
-        list = service.getDbaNames();
-        System.out.println(DbContextHolder.getDbType() + list);
+
 
 
 
@@ -242,40 +206,5 @@ public class DataCompareController {
     public void setService(DataCompareService service) {
         this.service = service;
     }
-
-
-    /* System.out.println(Dbs.getDbType());//直接使用得到空
-
-
-        //尝试设置数据源添加并切换
-        dynamicDataSource = new DynamicDataSource();
-
-        BasicDataSource dataSource2=dynamicDataSource.createDataSource("com.mysql.jdbc.Driver",
-                "jdbc:mysql://localhost:3306/passport","root","admin");
-
-        dynamicDataSource.addTargetDataSource("dataSource2",dataSource2);
-
-        dynamicDataSource.setTargetDataSources(dynamicDataSource.getTargetDataSource());
-        dynamicDataSource.setTargetDataSource(dynamicDataSource.getTargetDataSource());
-
-        dynamicDataSource.determineCurrentLookupKey();
-
-        //设置无效后面测试无结果
-        //请问在怎么合理的使用    dynamicDataSource 和 DBContextHolder
-                                //达到数据源切换的效果
-
-
-        List list = service.getDbaNames();
-        System.out.println(list);
-
-        Dbs.setDbType("1");
-        list=service.getDbaNames();
-
-
-        Dbs.setDbType("0");
-        list=service.getDbaNames();
-
-
-        dynamicDataSource.selectDataSource("0");*/
 
 }
