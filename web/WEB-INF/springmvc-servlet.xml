@@ -16,28 +16,8 @@
     <context:component-scan base-package="com.recruit.service"/>
     <mvc:annotation-driven></mvc:annotation-driven>
 
-    <!--1.dataSource-->
-    <!--<bean id="dataSource"  class="org.apache.commons.dbcp.BasicDataSource">
-        &lt;!&ndash; 数据驱动 &ndash;&gt;
-        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        &lt;!&ndash; 数据库的连接 &ndash;&gt;
-        <property name="url" value="jdbc:mysql://rm-uf6y70f8z4zrabhvro.mysql.rds.aliyuncs.com:3306/passport"/>
-        &lt;!&ndash; 账号 &ndash;&gt;
-        <property name="username" value="root"/>
-        &lt;!&ndash; 密码 &ndash;&gt;
-        <property name="password" value="1800438578Zz"/>
-        &lt;!&ndash; 最大连接数 &ndash;&gt;
-        <property name="maxActive" value="40"/>
-        &lt;!&ndash; 最大空闲数 &ndash;&gt;
-        <property name="maxIdle" value="5"/>
-    </bean>-->
-    <!--<bean id="parentDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="maxActive" value="40"></property>
-        <property name="maxIdle" value="5"></property>
-    </bean>-->
 
-
-    <bean id="dataSource" class="com.recruit.controller.util.DynamicDataSource">
+    <bean id="dataSource" class="com.recruit.controller.data.DynamicDataSource">
         <property name="targetDataSources">
             <map></map>
         </property>
@@ -57,11 +37,9 @@
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="mapperLocations" value="classpath:com/recruit/dao/data/*.xml"/>
-        <!--<property name="dynamicDataSource" ref="dynamicDataSource"/>-->
-
     </bean>
 
-    <!--3.mapper层的配置 -->
+    <!--Mapper层配置-->
     <bean id="mapper" class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!-- 注入sqlSessionFactory -->
         <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
@@ -74,12 +52,12 @@
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
 
-    <!--4.事务  -->
+    <!--4.事务
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <!-- 使用事务处理的连接池 -->
+         使用事务处理的连接池
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <!--5. 事务处理使用注解 -->
-    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+    5. 事务处理使用注解
+    <tx:annotation-driven transaction-manager="transactionManager"/>-->
 
 </beans>

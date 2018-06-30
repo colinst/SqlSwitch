@@ -98,8 +98,7 @@ public class DynamicDataSource extends AbstractRoutingDataSource {
             map = new HashMap<String, Object>();
             if (rs.next()) {
                 map.put("DBS_ID", rs.getInt("id"));
-                map.put("DBS_DriverClassName", rs
-                        .getString("driverclass"));
+                map.put("DBS_DriverClassName", rs.getString("driverclass"));
                 map.put("DBS_URL", rs.getString("url"));
                 map.put("DBS_UserName", rs.getString("username"));
                 map.put("DBS_Password", rs.getString("password"));

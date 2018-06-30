@@ -1,8 +1,161 @@
-<!doctype html>
-<head>
-    <title>题测</title>
-</head>
-<body>
-<a href="">题测</a>
-</body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>compare</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+			<div id="header">
+				<span class="logo icon fa-paper-plane-o"></span>
+				<h1>·-数据库热切换演示-·</h1>
+				<p>本人博客内已有详情说明 <a href="https://colinst.github.io">虹西的博客</a>
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<footer class="major container 75%">
+					<h3>操作说明</h3>
+					<p>输入两个数据库的名称不选择子表时默认对比两数据库中同名表<br>
+						当选择子表进行一键对比进行单表对比</p>
+					<ul class="actions">
+						<!--<li><a href="#" class="button">Join our crew</a></li>-->
+					</ul>
+				</footer>
+				
+				<div class="container 75%">
+
+					<form method="post" action="#">
+
+						<!--输入数据库名-->
+						<div class="row">
+							<div class="6u 12u(mobilep)">
+								<br>
+								<input type="text" name="dba_name1" placeholder="dba_name1" />
+							</div>
+							<div class="6u 12u(mobilep)">
+								<br>
+								<input type="email" name="dba_name2" placeholder="dba_name2" />
+							</div>
+						</div>
+
+						<!--选择所属表-->
+						<div class="row">
+							<div class="6u 12u(mobilep)">
+
+								<select aria-placeholder="选择数据表" >
+									<option value=""></option>
+									<option value="audi">Audi</option>
+								</select>
+							</div>
+							<div class="6u 12u(mobilep)">
+
+								<select aria-placeholder="选择数据表">
+									<option value=""></option>
+									<option value="audi">Audi</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row" style="display:none;" >
+							<div class="12u">
+								<textarea name="message" placeholder="Message" rows="6"></textarea>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="12u">
+								<ul class="actions">
+									<li><input type="submit" value="一键对比" /></li>
+								</ul>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			
+
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<div class="container 125%">
+
+					<header class="major last">
+						<h2>对比结果</h2>
+					</header>
+
+					<form method="post" action="#">
+
+						<!--输入数据库名-->
+						<div class="row">
+							<div class="4u 8u(mobilep)">
+								<h3>基本库</h3>
+								<table border="5" bordercolor="red">
+									<tr bgcolor="gray"><th>tablename</th></tr>
+									<tr bgcolor="gray" > 
+										<th class="action">Field</th>
+										<th class="2u">Type</th>
+										<th class="u">Null</th>
+										<th class="2u">key</th>
+										<th class="u">Default</th>
+										<th class="3u">extra</th>
+									</tr>
+									<tr>
+										<td class="action">_status</td>
+										<td class="2u">int(12)</td>
+										<td class="u">Yes</td>
+										<td class="2u"></td>
+										<td class="u">Null</td>
+										<td class="3u"></td>
+									</tr>
+									
+								</table>
+
+							</div>
+							<div class="4u 8u(mobilep)">
+								<h3>目标库</h3>
+								<input type="email" name="dba_name2" placeholder="dba_name2" />
+							</div>
+							<div class="4u 8u(mobilep)">
+								<h3>对比结果</h3>
+								<input type="email" name="dba_name2" placeholder="dba_name2" />
+							</div>
+						</div>
+
+						
+						
+
+						
+						
+				
+
+						<!--<div class="row">
+							<div class="12u">
+								<textarea name="message" placeholder="Message" rows="6"></textarea>
+							</div>
+						</div>-->
+
+					
+					</form>
+
+
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+				</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
