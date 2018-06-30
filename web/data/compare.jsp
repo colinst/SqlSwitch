@@ -129,7 +129,7 @@ tr:last-child td.last {
 <!-- Header -->
 <div id="header">
     <span class="logo icon fa-paper-plane-o"></span>
-    <h1>贝努鸟. 招聘题测项目.</h1>
+    <h1>招聘题测项目.</h1>
     <p>该项目已完成传至本人站点 <a href="http://www.colinst.xin.com">COLINST.XIN</a>
         <br />
         使用云数据库（MySQL） <a href="http://rm-uf6y70f8z4zrabhvro.mysql.rds.aliyuncs.com">mysql.rds.aliyuncs.com</a>.</p>

@@ -1,7 +1,7 @@
 package com.recruit.controller.data;
 
 import com.alibaba.fastjson.JSONArray;
-import com.recruit.controller.util.DbContextHolder;
+//import com.recruit.controller.util.DbContextHolder;
 import com.recruit.model.Column;
 import com.recruit.service.data.DataCompareService;
 import org.springframework.stereotype.Controller;
@@ -174,9 +174,6 @@ public class DataCompareController {
 
     //数据库对象对比返回结果Map（通过两数据库名）
     public Map<String,List<Column>> getResultsMap(Map<String, List<Column>> dba1,Map<String, List<Column>> dba2,String dba_name1,String dba_name2){
-/*
-        Map dba1 = getDbaMap(dba_name1);
-        Map dba2 = getDbaMap(dba_name2);*/
         Map<String, List<Column>> result = new HashMap<>();
 
         for (Object tname1:dba1.keySet()) {
